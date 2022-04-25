@@ -13,22 +13,22 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-3 me-3">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Главная</a>
+                        <a class="nav-link active" aria-current="page" href="{{ route('home') }}">Главная</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Новости</a>
+                        <a class="nav-link active" aria-current="page" href="{{ route('news') }}">Новости</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Рекорды</a>
+                        <a class="nav-link active" aria-current="page" href=" {{route('records')}} ">Рекорды</a>
                     </li>
 
                 </ul>
                 <ul class="navbar-nav mb-2 mb-lg-0 ms-3 me-3">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Вход</a>
+                        <a class="nav-link active" aria-current="page" href=" {{route('login')}}">Вход</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Регистрация</a>
+                        <a class="nav-link active" aria-current="page" href="{{route('register')}}">Регистрация</a>
                     </li>
                 </ul>
             </div>
