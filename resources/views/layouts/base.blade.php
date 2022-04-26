@@ -14,7 +14,10 @@
     @include('includes.header')
 
     <main class="flex-grow-1">
-        @yield('content')
+        <x-container>
+            @yield('content')
+        </x-container>
+
     </main>
 
     @include('includes.footer')
