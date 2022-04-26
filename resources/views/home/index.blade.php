@@ -25,7 +25,7 @@
                     laboriosam laudantium necessitatibus neque, nulla officia, omnis perspiciatis quas repudiandae vel.
                     Amet assumenda blanditiis dicta doloribus dolorum eius ex facere, fugit ipsum iure laboriosam nemo
                     nobis quia quisquam quo rem tenetur unde velit. Alias aliquam beatae commodi cupiditate doloremque
-                    esse et expedita, illo in maxime non optio quas quasi, recusandae sunt unde vel voluptate!
+                    esse et expedita, illo in maxime non optio quas quasi, recusandae sunt unde vel voluptate!🇷🇺
 
                 </x-card-text>
             </div>
