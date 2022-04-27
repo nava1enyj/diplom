@@ -27,10 +27,10 @@
                 </ul>
                 <ul class="navbar-nav mb-2 mb-lg-0 ms-3 me-3">
                     <li class="nav-item">
-                        <a class="nav-link {{ active_link('login') }}" aria-current="page" href=" {{route('login')}}">Вход</a>
+                        <a class="nav-link {{ active_link('user.login') }}" aria-current="page" href=" {{route('user.login')}}">Вход</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link {{ active_link('register') }}" aria-current="page" href="{{route('register')}}">Регистрация </a>
+                        <a class="nav-link {{ active_link('user.register') }}" aria-current="page" href=" {{route('user.register')}}">Регистрация </a>
                     </li>
                 </ul>
             </div>

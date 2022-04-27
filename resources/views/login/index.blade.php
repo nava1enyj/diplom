@@ -7,11 +7,11 @@
 
 @section('auth.title')
     <x-card-title>Вход</x-card-title>
-    <x-link href="{{ route('register') }}">Регистрация</x-link>
+    <x-link href="{{ route('user.register') }}">Регистрация</x-link>
 @endsection
 @section('auth.content')
     <x-alert>test</x-alert>
-    <x-form action="" method="POST">
+    <x-form action=" {{route('user.login')}} " method="POST">
         <x-form-item>
             <x-label for="Email">Email</x-label>
             <x-input type="email" id="email" aria-describedby="emailHelp" autofocus/>
@@ -20,6 +20,10 @@
             <x-label for="password">Password</x-label>
             <x-input type="password" id="password"/>
         </x-form-item>
+        <div class="mt-3 mb-3">
+           <x-link>Не помню пароль</x-link>
+
+        </div>
 
         <x-form-btn>Войти</x-form-btn>
     </x-form>
