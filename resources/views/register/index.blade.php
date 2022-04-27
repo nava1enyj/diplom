@@ -28,12 +28,12 @@
             <x-input type="email" id="email" aria-describedby="emailHelp" name="email" autofocus/>
         </x-form-item>
         <x-form-item>
-            <x-label for="login">Ваш логин</x-label>
-            <x-input id="login" name="login"/>
+            <x-label for="login">Логин</x-label>
+            <x-input id="login" name="login"  />
         </x-form-item>
         <x-form-item>
             <x-label for="avatar">Аватар</x-label>
-            <x-input type="file" id="avatar" name="image"/>
+            <x-input type="file" id="avatar" name="avatar"/>
             <div id="Help" class="form-text text-end">Необязательное поле</div>
 
         </x-form-item>
@@ -42,8 +42,8 @@
             <x-input type="password" id="password" name="password"/>
         </x-form-item>
         <x-form-item>
-            <x-label for="password_confirm">Подтвердите пароль</x-label>
-            <x-input type="password_confirm" id="password_confirm" name="password_confirm"/>
+            <x-label for="password_confirmation">Подтвердите пароль</x-label>
+            <x-input type="password" id="password_confirmation" name="password_confirmation"/>
         </x-form-item>
 
 
