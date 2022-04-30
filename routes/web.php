@@ -8,6 +8,7 @@ use App\Http\Controllers\NewsController;
 use App\Http\Controllers\RecordsContoller;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\QuizController;
 
 /*
 |--------------------------------------------------------------------------
@@ -42,6 +43,10 @@ Route::name('user.')->group(function (){
 
 
     Route::get('/admin', [AdminController::class, 'index'])->name('admin');
+});
+
+Route::name('game.')->group(function (){
+    Route::get('/quiz' , [QuizController::class, 'index'])->middleware('auth')->name('quiz');
 });
 
 Route::get('/news' , [NewsController::class, 'index'])->name('news');

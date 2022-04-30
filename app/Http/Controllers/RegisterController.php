@@ -26,12 +26,17 @@ class RegisterController extends Controller
             $path = $request->file('avatar')->store('uploads','public');
         }
 
+        $roles = User::getRoles();
+
+        $roles = array_flip($roles); //меняем ключ значение , мб это можно было сделать в методы getRoles() , но хз
+
         $user = User::create([
 
             'login' => $request['login'],
             'email' => $request['email'],
             'password' => $request['password'],
-            'avatar' => $path
+            'avatar' => $path,
+            'role' => $roles['Пользователь']
         ]);
 
 

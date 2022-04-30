@@ -31,7 +31,7 @@
             </div>
         </div>
         <div class="mt-3 row gy-3 ms-1">
-            <x-btn-game-start>Играть</x-btn-game-start>
+            <x-btn-game-start href="{{ route('game.quiz') }}">Играть</x-btn-game-start>
             <x-btn-game-leaders>Список лидеров</x-btn-game-leaders>
         </div>
     </x-card>
