@@ -5,11 +5,12 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\NewsController;
-use App\Http\Controllers\RecordsContoller;
+use App\Http\Controllers\RecordsController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\QuizController;
-
+use App\Http\Controllers\GameController;
+use App\Http\Controllers\HomeController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -21,7 +22,7 @@ use App\Http\Controllers\QuizController;
 |
 */
 
-Route::view('/', 'home.index')->name('home');
+Route::get('/', [HomeController::class , 'index'])->name('home');
 
 
 Route::name('user.')->group(function (){
@@ -46,9 +47,19 @@ Route::name('user.')->group(function (){
 });
 
 Route::name('game.')->group(function (){
+
+    Route::get('/games', [GameController::class, 'index'])->name('all');
+
     Route::get('/quiz' , [QuizController::class, 'index'])->middleware('auth')->name('quiz');
+
+    Route::post('/quiz/save', [QuizController::class, 'setResult'])->name('result.add');
+
+    Route::get('/records' , [RecordsController::class , 'index'])->name('quiz.records');
 });
+
+
+
 
 Route::get('/news' , [NewsController::class, 'index'])->name('news');
 
-Route::get('/records' , [RecordsContoller::class , 'index'])->name('records');
+

@@ -42,7 +42,7 @@ class RegisterController extends Controller
 
         if($user){
             Auth::login($user);
-            return redirect(route('user.profile'));
+            return redirect(route('home'));
         }
     }
 }

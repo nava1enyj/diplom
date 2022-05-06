@@ -20,7 +20,7 @@ class LoginController extends Controller
         $formFields = $request->only(['login' , 'password']);
 
         if(Auth::attempt($formFields)){
-            return redirect()->intended(route('user.profile'));
+            return redirect()->intended(route('home'));
         }
 
         return redirect(route('user.login'))->withErrors([

@@ -6,7 +6,7 @@
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid ms-xl-5 me-xl-5 me-lg-0 ms-lg-0 pt-1 pb-1">
             <a class="navbar-brand" href="#">
-                <img src="/docs/5.1/assets/brand/bootstrap-logo.svg" alt="" width="30" height="24"
+                <img src="{{ url('img/logo.png') }}" alt="" width="42" height="38"
                      class="d-inline-block align-text-top">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -23,10 +23,11 @@
                     <li class="nav-item">
                         <a class="nav-link {{ active_link('news') }}" aria-current="page" href="{{ route('news') }}">Новости</a>
                     </li>
+
                     <li class="nav-item">
-                        <a class="nav-link {{ active_link('records') }}" aria-current="page"
-                           href=" {{route('records')}} ">Рекорды</a>
+                        <a class="nav-link {{ active_link('game.all') }}" aria-current="page" href="{{ route('game.all') }}">Интеллектуальные игры</a>
                     </li>
+
 
                 </ul>
                 <ul class="navbar-nav mb-2 mb-lg-0 ms-3 me-3">
