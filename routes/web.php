@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RegisterController;
-use App\Http\Controllers\NewsController;
+use App\Http\Controllers\SciPopController;
 use App\Http\Controllers\RecordsController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\AdminController;
@@ -24,6 +24,7 @@ use App\Http\Controllers\HomeController;
 
 Route::get('/', [HomeController::class , 'index'])->name('home');
 
+Route::get('/skipop',[SciPopController::class, 'index'])->name('ski-pop');
 
 Route::name('user.')->group(function (){
 
@@ -60,6 +61,6 @@ Route::name('game.')->group(function (){
 
 
 
-Route::get('/news' , [NewsController::class, 'index'])->name('news');
+
 
 

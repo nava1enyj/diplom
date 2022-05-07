@@ -20,15 +20,16 @@
                         <a class="nav-link {{ active_link('home') }}" aria-current="page"
                            href="{{ route('home') }}">Главная</a>
                     </li>
+
                     <li class="nav-item">
-                        <a class="nav-link {{ active_link('news') }}" aria-current="page" href="{{ route('news') }}">Новости</a>
+                        <a class="nav-link {{ active_link('ski-pop') }}" aria-current="page"
+                           href="{{ route('ski-pop') }}">Науч-поп</a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link {{ active_link('game.all') }}" aria-current="page" href="{{ route('game.all') }}">Интеллектуальные игры</a>
+                        <a class="nav-link {{ active_link('game.all') }}" aria-current="page"
+                           href="{{ route('game.all') }}">Интеллектуальные игры</a>
                     </li>
-
-
                 </ul>
                 <ul class="navbar-nav mb-2 mb-lg-0 ms-3 me-3">
                     @if(Auth::check())

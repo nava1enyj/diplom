@@ -12,9 +12,12 @@
 
         <div class="row">
             <div class="col-xl-2 col-lg-2 me-lg-5 me-xl-0 col-md-3 me-md-4 col-sm-12">
+                <div class="col-3">
 
-                <x-card-img-game-logo
-                    src=" {{ url('img/quiz.png') }}"/>
+                    <x-card-img-game-logo
+                        src=" {{ url('img/quiz.png') }}"/>
+                </div>
+
             </div>
             <div class="col-xl-10 ps-xxl-2 ps-xl-4 col-lg-9 col-md-8 mt-md-0 col-sm-12 mt-3">
 
