@@ -30,6 +30,19 @@
                         <a class="nav-link {{ active_link('game.all') }}" aria-current="page"
                            href="{{ route('game.all') }}">Интеллектуальные игры</a>
                     </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link {{ active_link('covid') }}" aria-current="page"
+                           href="{{ route('covid') }}">Короновирус</a>
+                    </li>
+                    @if(Auth::check())
+                        @if(Auth::user()->role == '2')
+                            <li class="nav-item">
+                                <a class="nav-link {{ active_link('user.admin') }}" aria-current="page"
+                                   href="{{ route('user.admin') }}">Админка</a>
+                            </li>
+                        @endif
+                    @endif
                 </ul>
                 <ul class="navbar-nav mb-2 mb-lg-0 ms-3 me-3">
                     @if(Auth::check())

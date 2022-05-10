@@ -11,6 +11,7 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\QuizController;
 use App\Http\Controllers\GameController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\CovidController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -25,6 +26,8 @@ use App\Http\Controllers\HomeController;
 Route::get('/', [HomeController::class , 'index'])->name('home');
 
 Route::get('/skipop',[SciPopController::class, 'index'])->name('ski-pop');
+
+Route::get('/covid' , [CovidController::class, 'index'])->name('covid');
 
 Route::name('user.')->group(function (){
 

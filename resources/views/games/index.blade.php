@@ -5,10 +5,9 @@
 
 @section('content')
     <x-card>
-        <div class="text-center">
-
-            <x-card-title pos="center">Викторина</x-card-title>
-        </div>
+<x-text-center>
+    <x-card-title pos="center">Викторина</x-card-title>
+</x-text-center>
 
         <div class="row">
             <div class="col-xl-2 col-lg-2 me-lg-5 me-xl-0 col-md-3 me-md-4 col-sm-12">
