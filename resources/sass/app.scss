@@ -18,18 +18,7 @@
 }
 
 
-.like-container{
-   width: 50%;
-    margin: 0 auto;
-    transition: 1s;
-    border: 1px solid gray;
-    padding: 5px 1px 1px 5px;
-
-}
-
-.like-container:hover{
-    background: rgba(255, 215, 0, 0.04);
-    border: 1px solid red;
-    cursor: pointer;
-    transform: scale(1.1, 1.1);
+.icon-like{
+    width: 32px;
+    height: 32px;
 }

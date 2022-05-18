@@ -9,8 +9,8 @@
     </h4>
 
 
-    <div class="row justify-content-center">
-        <x-card col="11">
+    <div class="row justify-content-center ms-4 me-4">
+        <x-card col="col-12 col-md-11">
 
             <div class="ps-1 pe-1 ps-md-3 pe-md-3">
 

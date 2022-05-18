@@ -31,7 +31,6 @@ class RegisterController extends Controller
         $roles = array_flip($roles); //меняем ключ значение , мб это можно было сделать в методы getRoles() , но хз
 
         $user = User::create([
-
             'login' => $request['login'],
             'email' => $request['email'],
             'password' => $request['password'],
