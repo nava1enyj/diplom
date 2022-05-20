@@ -28,6 +28,7 @@ Route::get('/', [HomeController::class, 'index'])->name('home');
 
 Route::get('/skipop', [SciPopController::class, 'index'])->name('ski-pop');
 Route::post('/skipop/like/{id}', [SciPopController::class, 'likeAction'])->name('ski-pop.add.like')->middleware('auth');
+Route::get('/skipop/{category}', [SciPopController::class, 'index'])->name('ski-pop.category');
 
 Route::get('/covid', [CovidController::class, 'index'])->name('covid');
 

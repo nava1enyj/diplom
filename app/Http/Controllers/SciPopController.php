@@ -13,10 +13,16 @@ class SciPopController extends Controller
 {
 
 
-    public function index()
+    public function index($categoryId = 0)
     {
         $categories = Category::get();
-        $posts = Post::orderBy('created_at', 'desc')->get();
+        $posts = Post::latest();
+        if ($categoryId){
+           $posts = $posts->where('category_id' , $categoryId);
+        }
+
+
+        $posts = $posts->paginate(6);
         $likesCount = PostLikes::likesCount($posts);
 
         return view('ski-pop.index', ['posts' => $posts, 'categories' => $categories, 'likes' => $likesCount]);
@@ -46,6 +52,6 @@ class SciPopController extends Controller
         }
 
 
-        return redirect(route('ski-pop'));
+        return redirect()->back();
     }
 }
