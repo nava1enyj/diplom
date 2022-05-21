@@ -32,8 +32,8 @@
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link {{ active_link('covid') }}" aria-current="page"
-                           href="{{ route('covid') }}">Короновирус</a>
+                        <a class="nav-link {{ active_link('pandemic') }}" aria-current="page"
+                           href="{{ route('pandemic') }}">Пандемия</a>
                     </li>
                     @if(Auth::check())
                         @if(Auth::user()->role == '2')

@@ -4,9 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class CovidController extends Controller
+class PandemicController extends Controller
 {
    public function index(){
-       return view('covid.index');
+       return view('pandemic.index');
    }
 }

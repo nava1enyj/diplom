@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Post;
 use App\Models\QuizScore;
 use Illuminate\Http\Request;
 
@@ -15,7 +16,8 @@ class HomeController extends Controller
 
         $quizScoresQnique = $quizScoresQnique->values()->take(3)->all();
 
+        $posts = Post::latest()->take(3)->get();
 
-        return view('home.index', ['records' => $quizScoresQnique]);
+        return view('home.index', ['records' => $quizScoresQnique , 'posts' => $posts]);
     }
 }

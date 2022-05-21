@@ -1,6 +1,6 @@
 @extends('layouts.base')
 
-@section('title' , 'Личный кабинет')
+@section('page.title' , 'Науч-поп')
 
 @section('content')
 

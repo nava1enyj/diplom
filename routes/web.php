@@ -11,7 +11,7 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\QuizController;
 use App\Http\Controllers\GameController;
 use App\Http\Controllers\HomeController;
-use App\Http\Controllers\CovidController;
+use App\Http\Controllers\PandemicController;
 
 /*
 |--------------------------------------------------------------------------
@@ -28,9 +28,15 @@ Route::get('/', [HomeController::class, 'index'])->name('home');
 
 Route::get('/skipop', [SciPopController::class, 'index'])->name('ski-pop');
 Route::post('/skipop/like/{id}', [SciPopController::class, 'likeAction'])->name('ski-pop.add.like')->middleware('auth');
-Route::get('/skipop/{category}', [SciPopController::class, 'index'])->name('ski-pop.category');
+Route::get
 
-Route::get('/covid', [CovidController::class, 'index'])->name('covid');
+
+
+
+
+('/skipop/{category}', [SciPopController::class, 'index'])->name('ski-pop.category');
+
+Route::get('/pandemic', [PandemicController::class, 'index'])->name('pandemic');
 
 Route::name('user.')->group(function () {
 
