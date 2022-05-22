@@ -12,7 +12,7 @@ use App\Http\Controllers\QuizController;
 use App\Http\Controllers\GameController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PandemicController;
-
+use App\Http\Controllers\ResetPasswordController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -28,19 +28,21 @@ Route::get('/', [HomeController::class, 'index'])->name('home');
 
 Route::get('/skipop', [SciPopController::class, 'index'])->name('ski-pop');
 Route::post('/skipop/like/{id}', [SciPopController::class, 'likeAction'])->name('ski-pop.add.like')->middleware('auth');
-Route::get
-
-
-
-
-
-('/skipop/{category}', [SciPopController::class, 'index'])->name('ski-pop.category');
+Route::get('/skipop/{category}', [SciPopController::class, 'index'])->name('ski-pop.category');
 
 Route::get('/pandemic', [PandemicController::class, 'index'])->name('pandemic');
 
+Route::get('/reset-password/{token}', function ($token) {
+    return view('login.reset-password', ['token' => $token]);
+})->middleware('guest')->name('password.reset');
+
+Route::get('/password/request' , [ResetPasswordController::class , 'index'])->name('password.request');
+Route::post('/password/request' , [ResetPasswordController::class , 'passwordRequest'])->name('password.request');
+Route::post('/password-reset' , [ResetPasswordController::class , 'passwordReset'])->name('password.update');
+
 Route::name('user.')->group(function () {
 
-    Route::get('/login', [LoginController::class, 'index'])->name('login');
+   Route::get('/login', [LoginController::class, 'index'])->name('login');
 
     Route::get('/register', [RegisterController::class, 'index'])->name('register');
 
@@ -54,7 +56,6 @@ Route::name('user.')->group(function () {
         Auth::logout();
         return redirect('/');
     })->name('logout');
-
 
     Route::get('/admin', [AdminController::class, 'index'])->name('admin');
     Route::post('/admin', [AdminController::class, 'addPost'])->name('admin.post.add');
