@@ -36,9 +36,9 @@ Route::get('/reset-password/{token}', function ($token) {
     return view('login.reset-password', ['token' => $token]);
 })->middleware('guest')->name('password.reset');
 
-Route::get('/password/request' , [ResetPasswordController::class , 'index'])->name('password.request');
-Route::post('/password/request' , [ResetPasswordController::class , 'passwordRequest'])->name('password.request');
-Route::post('/password-reset' , [ResetPasswordController::class , 'passwordReset'])->name('password.update');
+Route::get('/password/request' , [ResetPasswordController::class , 'index'])->middleware('guest')->name('password.request');
+Route::post('/password/request' , [ResetPasswordController::class , 'passwordRequest'])->middleware('guest')->name('password.request');
+Route::post('/password-reset' , [ResetPasswordController::class , 'passwordReset'])->middleware('guest')->name('password.update');
 
 Route::name('user.')->group(function () {
 
@@ -47,6 +47,8 @@ Route::name('user.')->group(function () {
     Route::get('/register', [RegisterController::class, 'index'])->name('register');
 
     Route::get('/profile', [ProfileController::class, 'index'])->middleware('auth')->name('profile');
+
+    Route::post('/profile' , [ProfileController::class , 'changeData'])->name('change.data');
 
     Route::post('/login', [LoginController::class, 'login']);
 

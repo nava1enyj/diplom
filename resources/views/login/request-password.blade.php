@@ -19,6 +19,7 @@
     @error('message')
     <x-alert>{{ $message }}</x-alert>
     @enderror
+    <p>Сообщение может попасть в "cпам" будьте внимательны , проверьте!</p>
     <x-form action=" {{route('password.request')}} " method="POST">
         <x-form-item>
             <x-label for="Email">Email</x-label>
